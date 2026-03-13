@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Flick {
 	public static void main (String[] args) {
 		
+		// Captura de informações do usuário para o programa
 		Scanner entrada = new Scanner(System.in);
 		
 		String nome = "";
@@ -25,6 +26,7 @@ public class Flick {
 			genero = entrada.nextLine().trim().toUpperCase();
 		}
 		
+		// Validação da nota evitando valores incorretos
 		String notaStr = "";
 		float notaF = -1;
 		while(notaF < 0 || notaF > 10) {
