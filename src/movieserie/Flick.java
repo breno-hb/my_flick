@@ -1,12 +1,14 @@
 package movieserie;
 
 import java.util.Scanner;
+import database.SQLite;
 
 public class Flick {
 	public static void main (String[] args) {
 		
 		// Captura de informações do usuário para o programa
 		Scanner entrada = new Scanner(System.in);
+		SQLite bancoDados = new SQLite();
 		
 		String nome = "";
 		while(nome.isEmpty()) {
@@ -43,6 +45,8 @@ public class Flick {
 		}
 		
 		System.err.printf("\n\n%s - %s - %s - %.1f", nome, filmeSerie, genero, notaF);
+		
+		bancoDados.connect(nome, filmeSerie, genero, notaF);
 		
 		entrada.close();
 	}
