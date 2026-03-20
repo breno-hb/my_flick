@@ -1,8 +1,8 @@
-package projetoAvaliacao;
+package projeto;
 
 import java.util.Scanner;
 
-public class MetodosClasse {
+public class MetodoMyFlick {
 	static String ntt (Scanner entrada) {
 		return entrada.nextLine().trim().toUpperCase();
 	}

@@ -1,12 +1,12 @@
-package projetoAvaliacao;
+package projeto;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.Statement;
 
-public class BancoSqlite {
-	public void connect(String nome, String filmeSerie, String genero, double nota) {
+public class BancoMyFlick {
+public void connect(String nome, String filmeSerie, String genero, double nota) {
 		
 		String url = "jdbc:sqlite:filme_serie.db";
 		

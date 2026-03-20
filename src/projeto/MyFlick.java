@@ -1,36 +1,36 @@
-package projetoAvaliacao;
+package projeto;
 
 import java.util.Scanner;
 
-public class Principal {
+public class MyFlick {
 	public static void main (String[] args) {
 		
 		Scanner entrada = new Scanner(System.in);
-		BancoSqlite bancoMV = new BancoSqlite();
+		BancoMyFlick bancoMV = new BancoMyFlick();
 		
 		String nome = "";
 		while (nome.isEmpty()) {
 			System.out.print("Nome: ");
-			nome = MetodosClasse.ntt(entrada);
+			nome = MetodoMyFlick.ntt(entrada);
 		}
 		
 		String filmeSerie = "";
 		while(filmeSerie.isEmpty()) {
 			System.out.print("Filme ou série: ");
-			filmeSerie = MetodosClasse.ntt(entrada);
+			filmeSerie = MetodoMyFlick.ntt(entrada);
 		}
 		
 		String genero = "";
 		while(genero.isEmpty()) {
 			System.out.print("Gênero: ");
-			genero = MetodosClasse.ntt(entrada);
+			genero = MetodoMyFlick.ntt(entrada);
 		}
 		
 		double nota = -1;
 		
 		while(nota < 0 || nota > 10) {
 			System.out.print("Nota: ");
-			String notaS = MetodosClasse.ntt(entrada).replace(",", ".");
+			String notaS = MetodoMyFlick.ntt(entrada).replace(",", ".");
 			
 			try {
 				nota = Double.parseDouble(notaS);
@@ -57,3 +57,4 @@ public class Principal {
 		entrada.close();
 	}
 }
+
